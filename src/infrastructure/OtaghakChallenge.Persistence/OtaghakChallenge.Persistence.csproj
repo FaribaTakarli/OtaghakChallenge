@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ProductStoreMigrations\**" />
+    <EmbeddedResource Remove="ProductStoreMigrations\**" />
+    <None Remove="ProductStoreMigrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\OtaghakChallenge.Application\OtaghakChallenge.Application.csproj" />
+    <ProjectReference Include="..\..\core\OtaghakChallenge.Domain\OtaghakChallenge.Domain.csproj" />
+    <ProjectReference Include="..\ClassLibrary1\OtaghakChallenge.Infrastructure\OtaghakChallenge.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
